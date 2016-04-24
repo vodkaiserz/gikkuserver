@@ -26,20 +26,14 @@ body {
     font-weight: 700;
 }
 
+.quote {
+  display: block;
+  font-size: 80%;
+  color: #777;
+  text-align: right;
+}
+
 /* Custom Button Styles */
-
-.btn-dark {
-    border-radius: 0;
-    color: #fff;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.btn-dark:hover,
-.btn-dark:focus,
-.btn-dark:active {
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
-}
 
 .btn-light {
     border-radius: 0;
@@ -65,10 +59,10 @@ hr.small {
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    right: 0;
+    left: 0;
     width: 250px;
     height: 100%;
-    margin-right: -250px;
+    margin-left: -250px;
     overflow-y: auto;
     background: #222;
     -webkit-transition: all 0.4s ease 0s;
@@ -128,11 +122,11 @@ hr.small {
     z-index: 1;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
 }
 
 #sidebar-wrapper.active {
-    right: 250px;
+    left: 250px;
     width: 250px;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
@@ -145,6 +139,16 @@ hr.small {
     margin: 5px 5px 0 0;
 }
 
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  margin-left: 50px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family:"Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+}
+
 /* Header */
 
 .header {
@@ -152,11 +156,126 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url("stylish_portfolio/bg.jpg") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+/* Carousel */
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  margin-bottom: 20%;
+  left: 15%;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.carousel-caption-first {
+  position: absolute;
+  right: 15%;
+  top: 20%;
+  left: 15%;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  font-family:"Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+}
+
+.carousel-caption-quote-right {
+  position: absolute;
+  right: 15%;
+  top: 30%;
+  left: 15%;
+  z-index: 10;
+  color: #fff;
+  text-align: right;
+  font-size: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.carousel-caption-quote-center {
+  position: absolute;
+  right: 15%;
+  top: 15%;
+  left: 15%;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+
+.carousel {
+  max-height: 600px;
+  overflow: hidden;
+
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.carousel-inner-custom {
+  height: auto;
+  width: auto;
 }
 
 /* About */

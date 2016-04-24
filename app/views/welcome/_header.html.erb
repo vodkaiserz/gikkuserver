@@ -1,8 +1,66 @@
-<header id="top" class="header">
-    <div class="text-vertical-center">
-        <h1>Start Bootstrap</h1>
-        <h3>Free Bootstrap Themes &amp; Templates</h3>
-        <br>
-        <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+<div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel-category" >
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>-->
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" >
+    <div class="item active">
+      <%= image_tag("carousel-1.jpg", :alt => "carousel-1") %>
+      <div class="carousel-caption-first">
+         <div class="about-name-div">
+            <h1 >READY - START - GO!</h1>
+            <p class="lead">Gigku, where you can find your favorite local artists seamessly.</p>
+         </div>
+      </div>
+      <div class="carousel-caption">
+        <a class="btn btn-default" href="#about" role="button" id="aboutButton">LEARN MORE</a>
+      </div>
     </div>
-</header>
+    <div class="item">
+      <%= image_tag("carousel-2.jpg", :alt => "carousel-2") %>
+      <div class="carousel-caption-quote-center"><h1>What our customers says:</h1>
+      </div>
+      <div class="carousel-caption-quote-right">
+          <div class="about-name-div"><p></p>
+            <h3 ><i>“Gigku is awesome! I will always keep them in mind for all future events. We used their service for our company's annual event and it was great.”</i></h3>
+            <h5 class="quote">-John Robert, Rayford Industries-</h5>
+         </div>
+           <div class="about-name-div"><p></p>
+            <h3 ><i>“It is a very nice service, would definitely like to work with you guys again.”</i></h3>
+            <h5 class="quote">-Lukas Berg, Innovads-</h5>
+          </div>
+          <div class="about-name-div"><p></p>
+            <h3 ><i>Since I joined Gigku I have more events to gig! Fantastic!”</i></h3>
+            <h5 class="quote">-Rio, Artist-</h5>
+          </div>
+      </div>
+      
+    </div>
+    <!--<div class="item">
+      <%= image_tag("carousel-3.jpg", :alt => "carousel-3") %>
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag("carousel-4.jpg", :alt => "carousel-4") %>
+      <div class="carousel-caption">
+      </div>
+    </div>-->
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>   
+</div>
+<!-- end -->
