@@ -3,54 +3,46 @@
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>-->
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox" >
     <div class="item active">
       <%= image_tag("carousel-1.jpg", :alt => "carousel-1") %>
-      <div class="carousel-caption-first">
-         
-            <h1 >READY - START - GO!</h1>
-            <p class="lead">Gigku, where you can find your favorite local artists seamlessly.</p>
-         
-      </div>
+            <div class="carousel-caption-quote-right">
+              <div class="about-name-div"><p></p>
+                <h3 ><i>“It is a very nice service, would definitely like to work with you guys again.”</i></h3>
+                <p class="quote">-Lukas Berg, Innovads-</p>
+             </div>
+            </div>
       <!--<div class="carousel-caption">
         <a class="btn btn-default" href="#about" role="button" id="aboutButton">LEARN MORE</a>
       </div>-->
     </div>
     <div class="item">
       <%= image_tag("carousel-2.jpg", :alt => "carousel-2") %>
-      <div class="carousel-caption-quote-center"><h1>What our customers says:</h1>
-      </div>
       <div class="carousel-caption-quote-right">
           <div class="about-name-div"><p></p>
             <h3 ><i>“Gigku is awesome! I will always keep them in mind for all future events. We used their service for our company's annual event and it was great.”</i></h3>
             <p class="quote">-John Robert, Rayford Industries-</p>
          </div>
-           <div class="about-name-div"><p></p>
-            <h3 ><i>“It is a very nice service, would definitely like to work with you guys again.”</i></h3>
-            <p class="quote">-Lukas Berg, Innovads-</p>
-          </div>
-          <div class="about-name-div"><p></p>
-            <h3 ><i>Since I joined Gigku I have more events to gig! Fantastic!”</i></h3>
-            <p class="quote">-Rio, Artist-</p>
-          </div>
+
+          
       </div>
       
     </div>
-    <!--<div class="item">
-      <%= image_tag("carousel-3.jpg", :alt => "carousel-3") %>
-      <div class="carousel-caption">
-      </div>
-    </div>
     <div class="item">
-      <%= image_tag("carousel-4.jpg", :alt => "carousel-4") %>
-      <div class="carousel-caption">
+      <%= image_tag("bands.jpg", :alt => "carousel-1") %>
+        <div class="carousel-caption-quote-right">
+          <div class="about-name-div"><p></p>
+             <h3 ><i>Since I joined Gigku I have more events to gig! Fantastic!”</i></h3>
+            <p class="quote">-Rio, Artist-</p>
+         </div>
       </div>
-    </div>-->
+         
+    </div>
+
   </div>
 
   <!-- Controls -->
